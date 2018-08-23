@@ -142,7 +142,7 @@ for($count_i=0; $count_i <= $#LineFile; $count_i++){
 									if($tmp =~ m/[(]+/){
 										print $tmp;
 										$count_c++;
-										while(not($rec_split_coma[$count_c] =~ m/[)]+/)){
+										while($count_c <= $#rec_split_coma && not($rec_split_coma[$count_c] =~ m/[)]+/)){
                                                                                     print ",".$rec_split_coma[$count_c];
 											$count_c++;
 										}
